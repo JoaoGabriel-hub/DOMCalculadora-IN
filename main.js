@@ -7,7 +7,7 @@ function enviar_nota() {
     let nota = parseFloat(input.value);
 
     if (nota < 0 || nota > 10) {
-        alert("Nota inválida. As notas devem ser de 0 até 10");
+        alert("A nota digitada é inválida, por favor, insira uma nota válida.");
         return;
     }
 
