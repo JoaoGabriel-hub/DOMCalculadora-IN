@@ -3,8 +3,14 @@ let lista_notas = [];
 
 function enviar_nota() {
     let input = document.querySelector(".input");
+    let notaStr = input.value.trim();
 
-    let nota = parseFloat(input.value);
+    if (notaStr === '') {
+        alert("Por favor, insira uma nota.");
+        return;
+    }
+
+    let nota = parseFloat(notaStr);
 
     if (nota < 0 || nota > 10) {
         alert("A nota digitada é inválida, por favor, insira uma nota válida.");
